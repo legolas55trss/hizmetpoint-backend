@@ -1,3 +1,12 @@
-GET https://hizmetpoint-backend.onrender.com/api/test
+const express = require('express');
+const app = express();
 
-Asdasd
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Sunucu çalışıyor.');
+});
+
+app.listen(PORT, () => {
+  console.log(`Sunucu ${PORT} portunda çalışıyor.`);
+});
